@@ -1,0 +1,3 @@
+class BenefitPremiumLocators:
+
+    SelectPlan = 'SelectPlanButton'

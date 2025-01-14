@@ -1,0 +1,3 @@
+class SettingsLocators:
+
+    SettingsTitle = 'Settings'

@@ -1,0 +1,3 @@
+class AboutLocators:
+
+    AboutTitle = 'About'

@@ -1,0 +1,7 @@
+venv/
+.idea/
+.DS_Store
+__pycache__/
+results_connection_free_servers.txt
+results_connection_premium_servers.txt
+.env
