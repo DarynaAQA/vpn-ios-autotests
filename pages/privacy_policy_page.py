@@ -14,7 +14,7 @@ class PrivacyPolicyPage(AppiumMethods):
         return self.is_present('accessibility_id', PrivacyPolicyLocators.PrivacyPolicyLink).click()
 
     def check_for_presence_logo(self):
-        return self.is_present('accessibility_id', PrivacyPolicyLocators.LogoPlanetVpn)
+        return self.is_present('accessibility_id', PrivacyPolicyLocators.LogoVpn)
 
     def check_for_presence_privacy_policy_header(self):
         return self.is_clickable('xpath', PrivacyPolicyLocators.PrivacyPolicyHeader)

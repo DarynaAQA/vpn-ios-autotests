@@ -23,7 +23,7 @@
 
 ## About project 
 
-![logo](https://git.planetvpn.org/uploads/-/system/project/avatar/468/photo_2024-07-11_12-27-13.jpg?width=48)
+![logo](https://www.facebook.com/photo/?fbid=122139127040174832&set=p.122139127040174832)
 
 This project was created to ensure the highest the product quality and speed up the testing process.
 This README file will help you prepare everything you need to run the tests on your computer.
@@ -105,16 +105,16 @@ Follow this step by step to prepare your simulator for use with Appium:
 - Select your real phone/Simulator you'd like to run automated tests on as build target
 - Select IntegrationApp and click on the Build button - https://prnt.sc/Vr9JasqU3fo6. Check on successful installation of IntegrationApp.
 - Select WebDriverAgentRunner and click the Test button - https://prnt.sc/D7sXJJ3mE-US
-- Build the Planet VPN app one time before running tests
+- Build the iOS app one time before running tests
 
 ### Installation
-- clone the repository Planet VPN iOS Test from the main branch - https://git.planetvpn.org/freevpnplanet/qa/planet-vpn-ios-test.git 
+- clone the repository from the main branch 
 ```sh
   git clone {repo link}
   ```
 - go to the project root folder 
 ```sh
-  cd /planet-vpn-ios-test
+  cd /vpn-ios-autotests
   ```
 - create virtual environment by command
 ```sh
@@ -128,7 +128,7 @@ Follow this step by step to prepare your simulator for use with Appium:
 ```sh
   pip install -r requirements.txt
   ```
-- open conftest.py and indicate current value for variable APP_PATH. To determine the actual path, you need to open the desired Xcode project, go to Show the project navigator, find Planet VPN in the Products folder and click on it. On the right side you will see full path the app - https://prnt.sc/kw6_sELIOhM4
+- open conftest.py and indicate current value for variable APP_PATH. To determine the actual path, you need to open the desired Xcode project, go to Show the project navigator, find the app in the Products folder and click on it. On the right side you will see full path the app - https://prnt.sc/kw6_sELIOhM4
 
 - open your terminal and execute next command for run Appium server 
 ```sh
@@ -142,4 +142,4 @@ Follow this step by step to prepare your simulator for use with Appium:
 > <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Contact
-If you still have some questions, please ask them in my Slack profile - [Darina Bannik](https://planetvpn.slack.com/team/U03LV5XPYCX) 🙌
+If you still have some questions, please ask them in my Slack profile - [Darina Bannik]() 🙌

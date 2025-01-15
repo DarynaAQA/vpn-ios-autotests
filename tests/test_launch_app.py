@@ -17,10 +17,10 @@ class TestLaunch:
         launch_methods = LaunchPage(create_ios_driver)
         qase = QASEIntegration()
         try:
-            logo_planet = launch_methods.check_presence_for_logo()
+            logo = launch_methods.check_presence_for_logo()
             name_app = launch_methods.check_presence_for_name_app()
             launch_loader = launch_methods.check_presence_for_launch_loader()
-            assert isinstance(logo_planet, WebElement)
+            assert isinstance(logo, WebElement)
             assert isinstance(name_app, WebElement)
             assert isinstance(launch_loader, WebElement)
             qase.create_passed_result(case=3, test_run_id=qase_run_id,
@@ -28,4 +28,4 @@ class TestLaunch:
         except Exception as ex:
             qase.create_failed_result(case=3, test_run_id=qase_run_id,
                                       time=appium_methods.get_current_time() - get_start_time,
-                                      comment=f"Planet VPN logo not found \n {ex}")
+                                      comment=f"VPN logo not found \n {ex}")

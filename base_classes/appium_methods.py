@@ -101,7 +101,7 @@ class AppiumMethods:
     def close_browser(self):
         return self.close_app('com.apple.mobilesafari')
 
-    def background_app_planet(self):
+    def background_app(self):
         return self.driver.background_app(-1)
 
     def open_url(self, url: str):

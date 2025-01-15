@@ -1,5 +1,5 @@
 class MainLocators:
-    PlanetVpnName = 'fvp_menu_logo'
+    VpnName = 'fvp_menu_logo'
     SideBarButton = 'MainMenuButton'
     SelectLocation = 'MainChooseServerButton'
     YourLocation = 'Your location:'
@@ -10,7 +10,7 @@ class MainLocators:
     RemoveAdsButton = 'MainRemoveAdsButton'
     AdsBanner = 'MainBannerView'
     DefaultAdsBanner = 'defaultAdBanner'
-    PlanetAnimation = 'MainAnimationView'
+    Animation = 'MainAnimationView'
     MainAccountButton = 'fvp menu account'
     LogOutButton = 'logout'
 

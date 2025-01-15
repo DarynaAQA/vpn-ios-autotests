@@ -4,7 +4,7 @@ from locators.launch_locators import LaunchLocators
 
 class LaunchPage(AppiumMethods):
     def check_presence_for_logo(self):
-        return self.is_present('accessibility_id', LaunchLocators.LogoPlanetVpn)
+        return self.is_present('accessibility_id', LaunchLocators.LogoVpn)
 
     def check_presence_for_name_app(self):
         return self.is_present('accessibility_id', LaunchLocators.NameApp)

@@ -31,14 +31,14 @@ APPIUM_HOST = '0.0.0.0'
 
 
 @pytest.fixture(scope='function')
-def create_ios_driver(planet_app_path):
+def create_ios_driver(app_path):
     options = XCUITestOptions()
     options.platform_name = 'iOS'
     options.platform_version = '17.5'
     options.device_name = 'iPhone 15'
     options.udid = 'CCFBAE69-DB3D-4387-8632-7937449C322A'
     options.automation_name = 'XCUITest'
-    options.app = planet_app_path
+    options.app = app_path
     options.auto_accept_alerts = True
     driver = webdriver.Remote('http://0.0.0.0:4723/wd/hub', options=options)
     yield driver
@@ -46,14 +46,14 @@ def create_ios_driver(planet_app_path):
 
 
 @pytest.fixture(scope='session')
-def create_ios_driver_for_real_device(planet_app_path):
+def create_ios_driver_for_real_device(app_path):
     options = XCUITestOptions()
     options.platform_name = 'iOS'
     options.platform_version = '17.4.1'
     options.device_name = 'iPhone 14 Pro'
     options.udid = '00008120-001431CE0E58201E'
     options.automation_name = 'XCUITest'
-    options.app = planet_app_path
+    options.app = app_path
     options.auto_dismiss_alerts = True
     driver = webdriver.Remote('http://0.0.0.0:4723/wd/hub', options=options)
     yield driver
@@ -62,7 +62,7 @@ def create_ios_driver_for_real_device(planet_app_path):
 
 def pytest_addoption(parser):
     parser.addoption(
-        "--name", action="store", default="planet_vpn", help="Choose country for Planet VPN Lite"
+        "--name", action="store", default="vpn", help="Choose name app for VPN"
     )
 
     parser.addoption(
@@ -71,78 +71,70 @@ def pytest_addoption(parser):
 
 
 @pytest.fixture(scope="session", autouse=True)
-def planet_app_path(request):
+def app_path(request):
     name_app = request.config.getoption("--name")
     device = request.config.getoption("--device")
 
-    if name_app == "planet_vpn" and device == "s":
-        APP_PATH = ("/Users/darinabannik/Library/Developer/Xcode/DerivedData/rusvpn-ffugytzxqmggxtbmkwdhtoehdoce/"
-                    "Build/Products/Debug-Production-iphonesimulator/PlanetVPN.app")
+    if name_app == "name_app" and device == "s":
+        APP_PATH = "app_path"
 
-        BUNDLE_ID = "com.atrix.rusvpn"
+        BUNDLE_ID = "bundle_id"
         load_dotenv()
         env_path = '.env'
         set_key(env_path, 'BUNDLE_ID', BUNDLE_ID)
 
-    elif name_app == "planet_vpn" and device == "r":
-        APP_PATH = ("/Users/darinabannik/Library/Developer/Xcode/DerivedData/rusvpn-ffugytzxqmggxtbmkwdhtoehdoce/"
-                    "Build/Products/Debug-Production-iphoneos/PlanetVPN.app")
+    elif name_app == "name_app" and device == "r":
+        APP_PATH = "app_path"
 
-        BUNDLE_ID = "com.atrix.rusvpn"
+        BUNDLE_ID = "bundle_id"
         load_dotenv()
         env_path = '.env'
         set_key(env_path, 'BUNDLE_ID', BUNDLE_ID)
 
-    elif name_app == "blue" and device == "s":
-        APP_PATH = ("/Users/darinabannik/Library/Developer/Xcode/DerivedData/rusvpn-ffugytzxqmggxtbmkwdhtoehdoce/"
-                    "Build/Products/Debug-Production-iphonesimulator/rusvpnBlue.app")
+    elif name_app == "name_app" and device == "s":
+        APP_PATH = "app_path"
 
-        BUNDLE_ID = "com.free.vpn.planet"
+        BUNDLE_ID = "bundle_id"
         load_dotenv()
         env_path = '.env'
         set_key(env_path, 'BUNDLE_ID', BUNDLE_ID)
 
-    elif name_app == "blue" and device == "r":
-        APP_PATH = ("/Users/darinabannik/Library/Developer/Xcode/DerivedData/rusvpn-ffugytzxqmggxtbmkwdhtoehdoce/"
-                    "Build/Products/Debug-Production-iphoneos/rusvpnBlue.app")
+    elif name_app == "name_app" and device == "r":
+        APP_PATH = "app_path"
 
-        BUNDLE_ID = "com.free.vpn.planet"
+        BUNDLE_ID = "bundle_id"
         load_dotenv()
         env_path = '.env'
         set_key(env_path, 'BUNDLE_ID', BUNDLE_ID)
 
-    elif name_app == "dark" and device == "s":
-        APP_PATH = ("/Users/darinabannik/Library/Developer/Xcode/DerivedData/rusvpn-ffugytzxqmggxtbmkwdhtoehdoce/"
-                    "Build/Products/Debug-Production-iphonesimulator/rusvpnDark.app")
+    elif name_app == "name_app" and device == "s":
+        APP_PATH = "app_path"
 
-        BUNDLE_ID = "com.free.vpn.planet.dark"
+        BUNDLE_ID = "bundle_id"
         load_dotenv()
         env_path = '.env'
         set_key(env_path, 'BUNDLE_ID', BUNDLE_ID)
 
-    elif name_app == "dark" and device == "r":
-        APP_PATH = ("/Users/darinabannik/Library/Developer/Xcode/DerivedData/rusvpn-ffugytzxqmggxtbmkwdhtoehdoce/"
-                    "Build/Products/Debug-Production-iphoneos/rusvpnDark.app")
+    elif name_app == "name_app" and device == "r":
+        APP_PATH = "app_path"
 
-        BUNDLE_ID = "com.free.vpn.planet.dark"
+        BUNDLE_ID = "bundle_id"
         load_dotenv()
         env_path = '.env'
         set_key(env_path, 'BUNDLE_ID', BUNDLE_ID)
 
-    elif name_app == "green" and device == "s":
-        APP_PATH = ("/Users/darinabannik/Library/Developer/Xcode/DerivedData/rusvpn-ffugytzxqmggxtbmkwdhtoehdoce/"
-                    "Build/Products/Debug-Production-iphonesimulator/GreenPlanet.app")
+    elif name_app == "name_app" and device == "s":
+        APP_PATH = "app_path"
 
-        BUNDLE_ID = "com.free.vpn.planet.rus"
+        BUNDLE_ID = "bundle_id"
         load_dotenv()
         env_path = '.env'
         set_key(env_path, 'BUNDLE_ID', BUNDLE_ID)
 
-    elif name_app == "green" and device == "r":
-        APP_PATH = ("/Users/darinabannik/Library/Developer/Xcode/DerivedData/rusvpn-ffugytzxqmggxtbmkwdhtoehdoce/"
-                    "Build/Products/Debug-Production-iphoneos/GreenPlanet.app")
+    elif name_app == "name_app" and device == "r":
+        APP_PATH = "app_path"
 
-        BUNDLE_ID = "com.free.vpn.planet.rus"
+        BUNDLE_ID = "bundle_id"
         load_dotenv()
         env_path = '.env'
         set_key(env_path, 'BUNDLE_ID', BUNDLE_ID)

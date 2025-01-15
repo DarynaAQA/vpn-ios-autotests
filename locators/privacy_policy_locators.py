@@ -1,5 +1,5 @@
 class PrivacyPolicyLocators:
-    LogoPlanetVpn = 'fvp_logo'
+    LogoVpn = 'fvp_logo'
     AgreeContinueButton = 'consentAgreeButton'
     XButton = 'consentCloseButton'
     PrivacyPolicyLink = 'Privacy Policy'

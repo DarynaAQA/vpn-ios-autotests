@@ -12,7 +12,7 @@ class MainPage(AppiumMethods):
                                                 'ServerButton"]/XCUIElementTypeStaticText[3]').get_attribute('value')
 
     def check_presence_for_app_name(self):
-        return self.is_present('accessibility_id', MainLocators.PlanetVpnName)
+        return self.is_present('accessibility_id', MainLocators.VpnName)
 
     def check_presence_for_account_button(self):
         return self.is_present('accessibility_id', MainLocators.MainAccountButton)
@@ -41,8 +41,8 @@ class MainPage(AppiumMethods):
     def check_presence_for_ads_banner(self):
         return self.is_present('accessibility_id', MainLocators.DefaultAdsBanner)
 
-    def check_presence_for_planet_animation(self):
-        return self.is_present('accessibility_id', MainLocators.PlanetAnimation)
+    def check_presence_for_animation(self):
+        return self.is_present('accessibility_id', MainLocators.Animation)
 
     def sidebar_button_click(self):
         return self.is_clickable('accessibility_id', MainLocators.SideBarButton).click()

@@ -23,7 +23,7 @@ class QASEIntegration:
         date = datetime.datetime.today().strftime("%d.%m.%Y(%H:%M)")
 
         payload = {
-            "title": f"Debug_Testing_Mobile_iOS_PlanetVPN_{date}",
+            "title": f"Debug_Testing_Mobile_iOS_{date}",
             "plan_id": test_plan_id
         }
 
@@ -92,7 +92,7 @@ class QASEIntegration:
                 "type": "section",
                 "text": {
                     "type": "mrkdwn",
-                    "text": f":gear: <{public_test_run_url}|*Debug_PlanetVPN_iOS_testing_{date}({test_time})*>\n "
+                    "text": f":gear: <{public_test_run_url}|*Debug_iOS_testing_{date}({test_time})*>\n "
                             f"В случае проблемы обращаться к <@U03LV5XPYCX>"
                 }}]}
 

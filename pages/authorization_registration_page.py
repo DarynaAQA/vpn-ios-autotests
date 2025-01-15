@@ -38,7 +38,7 @@ class AuthorizationRegistrationPage(AppiumMethods):
         load_dotenv()
         self.is_clickable('accessibility_id', MainLocators.MainAccountButton).click()
         date_registration = datetime.datetime.now().strftime("%d%m%H%M")
-        email = f"darina.planetvpn-test{date_registration}@gmail.com"
+        email = f"darina.test{date_registration}@gmail.com"
         self.is_clickable('accessibility_id', LoginLocators.EnterEmail).click()
         self.is_clickable('accessibility_id', LoginLocators.EnterEmail).send_keys(email)
         self.is_clickable('accessibility_id', LoginLocators.SignIn).click()
